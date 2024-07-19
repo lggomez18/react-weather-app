@@ -8,7 +8,7 @@ export default function App() {
       <div className="container">
       <Weather />
       <footer>
-        Open-sourced on {""} <a href="https://github.com/lggomez18/react-weather-app" target="_blank" rel="noreferrer" >Github</a>
+        This project was coded by Leticia Gmx and is{""} <a href="https://github.com/lggomez18/react-weather-app" target="_blank" rel="noreferrer" >open-sourced on Github</a>
       </footer>
       </div>
     </div>
