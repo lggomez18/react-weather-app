@@ -23,9 +23,11 @@
 
 
 .Weather img {
-    height: 64px;
-    float:left;
+    height: 68px;
+    width: 64px;
+    margin-right: 10px;
     display:inline-block;
+    float: left;
 }
 
 .Weather ul{
@@ -42,8 +44,7 @@
 .Weather .temperature{
     font-weight: bold;
     color: rgb(33, 33, 33);
-    font-size: 64px;
-    font: weight 400px;;
+    font-size: 60px;
     line-height: 64px;
     font-weight: 400;  
 }
@@ -54,7 +55,7 @@
     font-weight: 400;
     position: relative;
     line-height: 1;
-    top:-34px;
+    top: -32px;
     margin-left: 5px;
 
 }

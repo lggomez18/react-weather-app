@@ -1,7 +1,17 @@
 import React from "react";
+import axios from "axios";
 import "./Weather.css";
 
 export default function Weather(){
+    function handleResponse(response){
+        console.log(response.data);
+    }
+    const apiKey ="290724cd93ad94b31t54c30cca2o800f";
+    let city = "New York";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+
+    axios.get(apiUrl).then(handleResponse);
+
     return <div className="Weather">
         <form>
             <div className="row">
@@ -26,7 +36,7 @@ export default function Weather(){
             <li>Wednesday 07:00</li>
             <li>Mostly cloudy</li>
             </ul>
-            <div className="row">
+            <div className="row mt-3">
                 <div className="col-6">
                     <div className="clearfix">
                     <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="Mostly cloudy" className="float-left"/>
