@@ -1,18 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
 import axios from "axios";
 import "./Weather.css";
 
 export default function Weather(){
+    const [load, setLoad]= useState(false);
+    const [temperature, setTemperature]= useState(null);
     function handleResponse(response){
         console.log(response.data);
+        setTemperature(response.data.main.temp);
     }
-    const apiKey ="290724cd93ad94b31t54c30cca2o800f";
-    let city = "New York";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
-    axios.get(apiUrl).then(handleResponse);
-
-    return <div className="Weather">
+    if (load){
+        return (
+        <div className="Weather">
         <form>
             <div className="row">
             <div className="col-9">
@@ -42,7 +42,7 @@ export default function Weather(){
                     <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="Mostly cloudy" className="float-left"/>
                   
                         <div className="float-left">
-                        <span className="temperature">6</span>
+                        <span className="temperature">{temperature}</span>
                         <span className="unit">°C</span>
                         </div>
                     </div>
@@ -62,5 +62,18 @@ export default function Weather(){
                     </ul>
                 </div>
             </div>
-        </div>;
+        </div>
+        );
+    } else {
+        const apiKey ="290724cd93ad94b31t54c30cca2o800f";
+        let city = "New York";
+        let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+    
+        axios.get(apiUrl).then(handleResponse);
+
+        return (setLoad);
+    }
+
+
+    
 }
