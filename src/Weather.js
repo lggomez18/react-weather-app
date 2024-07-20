@@ -4,10 +4,12 @@ import "./Weather.css";
 
 export default function Weather(){
     const [load, setLoad]= useState(false);
-    const [temperature, setTemperature]= useState(null);
+    const [weatherData, setWeatherData]= useState({});
     function handleResponse(response){
         console.log(response.data);
+        setWeatherData({})
         setTemperature(response.data.main.temp);
+        setLoad(true);
     }
 
     if (load){
@@ -31,10 +33,10 @@ export default function Weather(){
             </div>
             </div>
         </form>
-        <h1>New York</h1>
+        <h1>{weatherData.city}</h1>
         <ul>
             <li>Wednesday 07:00</li>
-            <li>Mostly cloudy</li>
+            <li>{weatherData.description}</li>
             </ul>
             <div className="row mt-3">
                 <div className="col-6">
@@ -42,7 +44,7 @@ export default function Weather(){
                     <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="Mostly cloudy" className="float-left"/>
                   
                         <div className="float-left">
-                        <span className="temperature">{temperature}</span>
+                        <span className="temperature">{Math.round(temperature)}</span>
                         <span className="unit">°C</span>
                         </div>
                     </div>
@@ -71,9 +73,6 @@ export default function Weather(){
     
         axios.get(apiUrl).then(handleResponse);
 
-        return (setLoad);
-    }
-
-
-    
+        return "Loading";
+    }  
 }
