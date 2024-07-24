@@ -8,7 +8,11 @@ export default function Weather(){
     const [weatherData, setWeatherData]= useState({});
     function handleResponse(response){
         console.log(response.data);
-        setWeatherData({})
+        setWeatherData({
+            temperature:response.data.main.temp,
+            wind: response.data.main.wind.speed,
+            city: response.data.name,
+        });
         setTemperature(response.data.main.temp);
         setLoad(true);
     }
@@ -60,7 +64,7 @@ export default function Weather(){
                          Humidity: 30%
                         </li>
                         <li>
-                         Wind: {wind}
+                         Wind: {weatherData.wind}
                         </li>
                     </ul>
                 </div>
