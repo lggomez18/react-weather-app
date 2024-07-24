@@ -4,6 +4,7 @@ import "./Weather.css";
 
 export default function Weather(){
     const [load, setLoad]= useState(false);
+    const [temperature, setTemperature]= useState(null);
     const [weatherData, setWeatherData]= useState({});
     function handleResponse(response){
         console.log(response.data);
@@ -59,7 +60,7 @@ export default function Weather(){
                          Humidity: 30%
                         </li>
                         <li>
-                         Wind: 13 km/h
+                         Wind: {wind}
                         </li>
                     </ul>
                 </div>
