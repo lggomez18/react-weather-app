@@ -14,13 +14,13 @@ export default function Weather(props){
 
         setWeatherData({
             ready:true,
-            temperature:response.data.main.temp,
+            temperature:response.data.temperature.current,
             wind: response.data.main.wind,
-            humidity:response.data.main.humidity,
+            humidity:response.data.temperature.humidity,
             date:new Date(response.data.dt * 1000),
             description:response.data.weather[0].description,
             iconUrl:"https://ssl.gstatic.com/onebox/weather/64/sunny.png",
-            city: response.data.name,
+            city: response.data.city,
         });
 
 
