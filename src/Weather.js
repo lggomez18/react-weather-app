@@ -15,11 +15,11 @@ export default function Weather(props){
         setWeatherData({
             ready:true,
             temperature:response.data.temperature.current,
-            wind: response.data.main.wind,
+            wind: response.data.wind.speed,
             humidity:response.data.temperature.humidity,
             date:new Date(response.data.dt * 1000),
-            description:response.data.weather[0].description,
-            iconUrl:"https://ssl.gstatic.com/onebox/weather/64/sunny.png",
+            description:response.data.condition.description,
+            iconUrl:`http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.weather[0].icon}`,
             city: response.data.city,
         });
 
