@@ -1,6 +1,7 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import WeatherIcon from "./WeatherIcon";
 import "./Weather.css";
 
 export default function Weather(props){
@@ -9,17 +10,22 @@ export default function Weather(props){
     //const [ready, setReady]=useState(false);
     //const [temperature, setTemperature]= useState(null);
 
+    useEffect(() => {
+        search();
+    }, [city]);
+    
+
     function handleResponse(response){
 
 
-        setWeatherData({
+         setWeatherData({
             ready:true,
             temperature:response.data.temperature.current,
             wind: response.data.wind.speed,
             humidity:response.data.temperature.humidity,
             date:new Date(response.data.dt * 1000),
             description:response.data.condition.description,
-            iconUrl:response.data.weather[0].icon,
+            iconUrl:response.data.condition.icon_url,
             city: response.data.city,
         });
 
@@ -31,8 +37,8 @@ export default function Weather(props){
     }
 
     function search(){
-        const apiKey ="290724cd93ad94b31t54c30cca2o800f";
-        let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+        const apiKey = "290724cd93ad94b31t54c30cca2o800f";
+        let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=metric`;
     
         axios.get(apiUrl).then(handleResponse);
 
@@ -78,7 +84,7 @@ export default function Weather(props){
         );
     } else {
        
-        search();
+        //search();
         return "Loading";
     }  
 }
