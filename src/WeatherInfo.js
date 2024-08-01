@@ -11,8 +11,7 @@ export default function WeatherInfo(props){
 
 <ul>
     <li><FormattedDate date={props.data.date} /></li>
-    <li>{weatherData.date}</li>
-    <li className="text-capitalize">{weatherData.description}</li>
+    <li className="text-capitalize">{props.data.description}</li>
 </ul>
 
     <div className="row mt-3">
@@ -20,12 +19,12 @@ export default function WeatherInfo(props){
             <div className="clearfix">
             
             <div className="float-left">
-            <WeatherIcon code={props.data.icon} alt={props.data.description}/>
+            <WeatherIcon code={props.data.iconUrl} alt={props.data.description}/>
             </div>
           
                 <div className="float-left">
-                <span className="temperature">{Math.round(weatherData.temperature)}</span>
-                <span className="unit">°C</span>
+                <WeatherTemperature celsius={props.data.temperature}/>
+                
                 </div>
             </div>
         </div>
@@ -36,10 +35,10 @@ export default function WeatherInfo(props){
                  Precipitation: 15%   
                 </li>
                 <li>
-                 Humidity:{weatherData.humidity}
+                 Humidity:{props.data.humidity}
                 </li>
                 <li>
-                 Wind:{weatherData.wind}
+                 Wind:{props.data.wind}
                 </li>
             </ul>
         </div>
@@ -47,3 +46,5 @@ export default function WeatherInfo(props){
     </div>
     );
 }
+
+//    <li>{weatherData.date}</li> below     <li><FormattedDate date={props.data.date} /></li> had to be removed as the issue would try to print the object. 
