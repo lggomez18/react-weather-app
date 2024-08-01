@@ -1,15 +1,13 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
-import WeatherTemperature from "./WeatherTemperature";
 import "./Weather.css";
 
 export default function Weather(props){
     const [weatherData, setWeatherData]= useState({ ready:false });
-    const [city, setCity] = useState(props.defaultCity);
+    const [city, setCity] = useState(props.city);
     //const [ready, setReady]=useState(false);
     //const [temperature, setTemperature]= useState(null);
-
   
     
 
@@ -30,7 +28,6 @@ export default function Weather(props){
 
         //setTemperature(response.data.main.temp); instead of caling setTemperature, added inside setWeatherData
         //setReady(true); instead of calling set ready, added inside setWeatherData
-
 
     }
 
