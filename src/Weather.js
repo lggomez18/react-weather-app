@@ -22,11 +22,11 @@ export default function Weather(props){
             humidity:response.data.temperature.humidity,
             date:new Date(response.data.time * 1000),
             description:response.data.condition.description,
-            iconUrl:response.data.condition.icon_url,
+            icon: response.data.weather.icon,
             city: response.data.city,
         });
 
-
+        //iconUrl:response.data.condition.icon_url,
         //setTemperature(response.data.main.temp); instead of caling setTemperature, added inside setWeatherData
         //setReady(true); instead of calling set ready, added inside setWeatherData
 
