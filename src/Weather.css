@@ -33,6 +33,7 @@
     width: 64px;
     margin-right: 10px;
     display:inline-block;
+    flex: auto;
 }
 
 .Weather ul{

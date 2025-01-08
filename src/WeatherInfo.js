@@ -18,15 +18,18 @@ export default function WeatherInfo(props){
     <li className="text-capitalize">{props.data.description}</li>
 </ul>
 
-    <div className="row mt-3">
+    <div className="row mt-4">
         <div className="col-6">
-            <div className="d-flex">
-            <WeatherIcon code={props.data.icon} size={54} />
+            <div className="d-flex align-items-center">
+            
             <div>
+            <WeatherIcon code={props.data.icon} size={54} />
+            </div>
+            <div className="align-items-right">
             <WeatherTemperature celsius={props.data.temperature}/>
             </div>
+
             </div>
-        </div>
         </div>
     
         <div className="col-6">
@@ -39,6 +42,7 @@ export default function WeatherInfo(props){
                 </li>
             </ul>
         </div>
+    </div>
     </div>
     );
 }
