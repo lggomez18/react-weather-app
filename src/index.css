@@ -11,14 +11,20 @@ body{
   width:100%;
 }
 
-.relax .weather{
-  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/154/307/original/pexels-walidphotoz-847402.jpg?1736386170);
-  color:#000;
-  overflow: hidden;
-  backdrop-filter: blur(25px); /* Apply blur effect */
-  -webkit-backdrop-filter: blur(10px); /* For Safari */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: A subtle border */
-  border-radius: 10px; /* Optional: Rounded corners */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Optional: Add a soft shadow */
-  padding: 20px; /* Optional: Inner spacing */
+.relax footer{
+ color:#f0ece2;
 }
+
+.relax button{
+background:#f0ece2;
+font-family: "Poppins", serif;
+font-size: 15px;
+margin:15px;
+opacity:0.8;
+}
+
+.relax .Weather{
+  opacity: 0.6;
+  color:#616161;
+}
+
