@@ -1,3 +1,24 @@
 body{
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.relax{
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/154/307/original/pexels-walidphotoz-847402.jpg?1736386170);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width:100%;
+}
+
+.relax .weather{
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/154/307/original/pexels-walidphotoz-847402.jpg?1736386170);
+  color:#000;
+  overflow: hidden;
+  backdrop-filter: blur(25px); /* Apply blur effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: A subtle border */
+  border-radius: 10px; /* Optional: Rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Optional: Add a soft shadow */
+  padding: 20px; /* Optional: Inner spacing */
+}
