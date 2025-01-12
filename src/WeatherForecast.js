@@ -7,13 +7,14 @@ import axios from "axios";
 
 export default function WeatherForecast(props) {
   function handleResponse (response){
-    
+  console.log (response.data)  
+
   }
   
-  const apiKey = "290724cd93ad94b31t54c30cca2o800f";
-  let longitude = 40.7;
-  let latitude = 74;
-  let apiUrl =`https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=${apikey}`
+  let apiKey = "290724cd93ad94b31t54c30cca2o800f";
+  let longitude = props.coordinates.long;
+  let latitude = props.coordinates.lat;
+  let apiUrl =`https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=${apiKey}`
   
   axios.get(apiUrl).then(handleResponse);
   return (
