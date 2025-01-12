@@ -1,3 +1,11 @@
+Building a Weather App using React. For personalization, I have added google fonts and built a relax theme that users can swtich on. 
+
+Skills learnt in this project:
+- Installing, initializing and terminating in the terminal using shortcuts
+- Bootstrap
+- UseStates
+- Functions 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
