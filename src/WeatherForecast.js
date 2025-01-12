@@ -5,6 +5,8 @@ import "./WeatherForecast.css";
 
 
 export default function WeatherForecast(props) {
+  const apiKey = "290724cd93ad94b31t54c30cca2o800f";
+let apiUrl =`https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=${apikey}`
   return (
     <div className="WeatherForecast">
       <div className="row">
