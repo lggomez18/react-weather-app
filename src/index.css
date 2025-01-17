@@ -24,6 +24,10 @@ display: block;
 opacity:0.8;
 }
 
+.relax a{
+  color:lightslategray;
+}
+
 .relax .Weather{
   opacity: 0.6;
   color:#616161;
