@@ -26,7 +26,7 @@ function load(){
   let apiKey = "290724cd93ad94b31t54c30cca2o800f";
   let longitude = props.coordinates.longitude;
   let latitude = props.coordinates.latitude;
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=metric`;  axios.get(apiUrl).then(handleResponse);
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(handleResponse);
 }
