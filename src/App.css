@@ -9,6 +9,16 @@
   text-align: center;
 }
 
+.relax .btn button{
+    color: #212529;
+    background-color:#f0ece2 ;
+    font-family: "Poppins", serif;
+    font-size: 15px;
+    margin: 20px auto;
+    display:flex;
+    opacity:0.8;
+}
+
 .poppins-regular {
   font-family: "Poppins", serif;
   font-weight: 400;

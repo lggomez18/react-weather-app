@@ -2,7 +2,7 @@ body{
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#relax{
+.relax{
   background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/154/307/original/pexels-walidphotoz-847402.jpg?1736386170);
   background-size: cover;
   background-repeat: no-repeat;
@@ -11,24 +11,29 @@ body{
   width:100%;
 }
 
-#relax footer{
+.relax footer{
  color:#f0ece2;
 }
 
-#relax button{
-background:#f0ece2;
+.relax-theme{
+color: #212529;
+background:#f0ece2 ;
+background:#f0ece2 ;
+border: 1px solid transparent;
 font-family: "Poppins", serif;
-font-size: 15px;
+font-size: 1rem;
+border-radius: 0.375rem;
 margin: 20px auto;
-display: block;
+display:flex;
 opacity:0.8;
+
 }
 
-#relax a{
+.relax a{
   color:lightslategray;
 }
 
-#relax .Weather{
+.relax .Weather{
   opacity: 0.6;
   color:#616161;
 }
