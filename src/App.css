@@ -1,12 +1,15 @@
 .App {
   max-width: 600px;
   margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .App footer {
   font-size: 12px;
   margin: 10px 0;
   text-align: center;
+  
 }
 
 .relax .btn button{
@@ -30,3 +33,38 @@
   font-weight: 600;
   font-style: normal;
 }
+
+@media (max-width:700px){
+  .App{
+    height:auto;
+    width:auto;
+  }
+
+  .relax{
+    background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/154/307/original/pexels-walidphotoz-847402.jpg?1736386170);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height:fit-content; /* Full viewport height */
+    width: fit-content; /* Full viewport width */
+  }
+}
+
+@media (max-width:900px){
+  .WeatherForecast{
+    height:fit-content;
+    width:fit-content;
+  }
+
+  .relax{
+    background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/154/307/original/pexels-walidphotoz-847402.jpg?1736386170);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+  }
+}
+
