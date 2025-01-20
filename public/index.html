@@ -22,8 +22,8 @@
   -->
     <title>React Weather App</title>
   </head>
-  <body>
-    <button type="button" class="relax btn btn-light">Relax theme</button>
+  <body id="relax">
+    <button type="button" class="btn btn-light">Relax theme</button>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     
     <!--Instead of designing your html here, code everything inside app.js or index.js <div class="container">-->
@@ -43,9 +43,9 @@
   <script>
     function relaxTheme(){
       let body = document.querySelector("body");
-      body.classList.add("relax-button");
+      body.classList.add("#relax");
     }
-    let themeButton = document.querySelector(".relax-button");
+    let themeButton = document.querySelector("#relax");
     themeButton.addEventListener("click", relaxTheme)
   </script>
 </html>
